@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    image: nehalwandhare/backend:latest
+    container_name: backend
+    restart: always
+    depends_on:
+      - mongodb
+
+  frontend:
+    image: nehalwandhare/frontend:latest
+    container_name: frontend
+    restart: always
+    depends_on:
+      - backend
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - frontend
+      - backend
+
+volumes:
+  mongo_data:
