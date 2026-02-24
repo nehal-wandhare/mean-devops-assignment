@@ -91,6 +91,35 @@ docker-compose up -d
 
 ---
 
+---
+
+# 📸 Screenshots
+
+## 1️⃣ CI/CD Pipeline Success
+![CI/CD Pipeline](screenshots/ci-success.png)
+
+---
+
+## 2️⃣ Docker Hub Images
+![Docker Hub Images](screenshots/dockerhub.png)
+
+---
+
+## 3️⃣ Running Containers on EC2
+![Docker PS](screenshots/docker-ps.png)
+
+---
+
+## 4️⃣ Application Running in Browser
+![Application Running](screenshots/app-running.png)
+
+---
+
+---
+
+##  AWS EC2 Instance Running
+![EC2 Instance](screenshots/ec2-instance.png)
+
 ## 👨‍💻 Author
 
 Nehal Wandhare  
